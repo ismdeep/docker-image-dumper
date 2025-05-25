@@ -3,13 +3,14 @@ name: Docker Image Dumper
 on:
   workflow_dispatch:
     inputs:
+      docker_image:
+        description: "Docker image (e.g., nginx:latest)"
+        required: true
+        default: "nginx:latest"
       platform:
         description: "Target platform (e.g., linux/amd64)"
         required: true
         default: "linux/amd64"
-      docker_image:
-        description: "Docker image (e.g., nginx:latest)"
-        required: true
 
 jobs:
   dump:
