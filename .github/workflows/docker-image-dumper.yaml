@@ -1,4 +1,4 @@
-name: Docker Image Dumper - ${{ inputs.docker_image }} - ${{ inputs.platform }}
+name: Docker Image Dumper
 
 on:
   workflow_dispatch:
@@ -14,6 +14,7 @@ on:
 
 jobs:
   dump:
+    name: Docker Image Dumper - ${{ github.event.inputs.docker_image }} - ${{ github.event.inputs.platform }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
