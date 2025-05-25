@@ -1,4 +1,4 @@
-name: Docker Image Dumper
+name: Docker Image Dumper - ${{ inputs.docker_image }} - ${{ inputs.platform }}
 
 on:
   workflow_dispatch:
