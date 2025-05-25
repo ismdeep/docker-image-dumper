@@ -12,6 +12,8 @@ on:
         required: true
         default: "linux/amd64"
 
+run-name: Docker Image Dumper - ${{ inputs.docker_image }} - ${{ inputs.platform }}
+
 jobs:
   dump:
     name: Docker Image Dumper - ${{ github.event.inputs.docker_image }} - ${{ github.event.inputs.platform }}
